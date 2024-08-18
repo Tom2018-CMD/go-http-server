@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"example.com/http_demo/router"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -12,12 +13,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-
 func main() {
 	//mux := http.NewServeMux()
 	//mux.Handle("/", &helloHandler{})
 	muxRouter := mux.NewRouter()
 
+	fmt.Println("dasda")
 	router.RegisterRoutes(muxRouter)
 
 	server := &http.Server{
@@ -46,4 +47,3 @@ func main() {
 		}
 	}
 }
-
